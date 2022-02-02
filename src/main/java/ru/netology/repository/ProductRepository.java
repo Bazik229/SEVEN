@@ -2,6 +2,8 @@ package ru.netology.repository;
 
 import ru.netology.domain.Product;
 
+import java.util.Arrays;
+
 public class ProductRepository {
     private Product[] items = new Product[0];
 
@@ -30,28 +32,8 @@ public class ProductRepository {
                 index++;
             }
         }
+        items = tmp;
     }
+
+
 }
-
-//  public Product findById(int id) {
-//    for (Product item : items) {
-//      if (item.getId() == id) {
-//        return item;
-//      }
-//    }
-//    return null;
-//  }
-//
-
-//    }
-//    items = tmp;
-//  }
-
-//  public Product searchBy(String text){
-//    for (Product item : items){
-//      if (item.getName() == text){
-//        return item;
-//      }
-//    }
-//    return null;
-//  }
