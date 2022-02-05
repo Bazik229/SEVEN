@@ -39,16 +39,14 @@ public class ProductManager {
             }
             return false;
         }
-        if (product instanceof Smartphone){
+        else if (product instanceof Smartphone) {
             Smartphone smartphone = (Smartphone) product;
-            if (smartphone.getCompany().contains(search) || smartphone.getName().contains(search)){
+            if (smartphone.getCompany().contains(search) || smartphone.getName().contains(search)) {
                 return true;
             }
         }
         return false;
     }
-    public Product[] getAll (){
-       return repository.findAll();
-    }
+
 
 }
